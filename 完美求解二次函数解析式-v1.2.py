@@ -431,4 +431,4 @@ except Exception as error:
     print(f"""_(¦3」∠)_，程序出错了！请到当前目录下找到{log_name}.log文件
     并反馈给开发者：QQ2330153227，请注明版本""")
     with open(f"{log_name}.log", "w", encoding="utf-8") as f:
-        f.write(error)
+        f.write(str(error))
