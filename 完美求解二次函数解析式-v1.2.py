@@ -11,7 +11,7 @@ except ModuleNotFoundError as error:
     print(path)
     if r'C:\Pyblock\resources\app\Python-win64' in path:
         os.system(
-            r"pip install --target=C:\Users\Administrator\.wood\libs_x64 {}".format(m))
+            r"pip install -t C:\Users\Administrator\.wood\libs_x64 {}".format(m))
     else:
         os.system("pip install {}".format(m))
 
