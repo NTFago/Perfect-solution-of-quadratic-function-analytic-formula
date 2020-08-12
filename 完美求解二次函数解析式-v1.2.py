@@ -1,21 +1,20 @@
-def ness():
-    try:
-        import matplotlib.pyplot as plt          # 导入matplotlib用于绘图
-        import numpy as np                       # numpy库用于科学计算
-        from fractions import Fraction as fa     # 用于显示分数
-    except ModuleNotFoundError as error:
-        print(error)
-        import os
-        m = str(error).split("\'")[1]
-        path = os.environ['path']
-        python_path = None
-        print(path)
-        if r'C:\Pyblock\resources\app\Python-win64' in path:
-            os.system(
-                r"pip install --target=C:\Pyblock\resources\app\cmpython_ext_libs {}".format(m))
-        else:
-            os.system("pip install {}".format(m))
-        ness()
+try:
+    import matplotlib.pyplot as plt          # 导入matplotlib用于绘图
+    import numpy as np                       # numpy库用于科学计算
+    from fractions import Fraction as fa     # 用于显示分数
+except ModuleNotFoundError as error:
+    print(error)
+    import os
+    m = str(error).split("\'")[1]
+    path = os.environ['path']
+    python_path = None
+    print(path)
+    if r'C:\Pyblock\resources\app\Python-win64' in path:
+        os.system(
+            r"pip install --target=C:\Pyblock\resources\app\cmpython_ext_libs {}".format(m))
+    else:
+        os.system("pip install {}".format(m))
+
 
 # 求解type1
 def solve_type1():
@@ -389,7 +388,6 @@ def create_graph(a, b, c, d=-10, e=10):  # d,e分别是x的取值范围
     plt.show()
 
 def main():
-    ness()
     # 类型采集
     Input = input('''请输入二次函数类型：
             \t type1（一般式）:y=ax^2+bx+c      （请输入1）
